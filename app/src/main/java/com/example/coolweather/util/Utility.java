@@ -49,7 +49,7 @@ public class Utility {
                     City city = new City();
                     city.setCityCode(cityObject.getInt("id"));
                     city.setCityName(cityObject.getString("name"));
-                    city.setProvinceId(provinceId);  //所属的省级代号
+                    city.setProvinceCode(provinceId);  //所属的省级代号
                     city.save();
                 }
                 return true;
@@ -69,7 +69,7 @@ public class Utility {
                     County county = new County();
                     county.setCountyName(countyObject.getString("name"));
                     //县级天气信息
-                    county.setWeatherId(countyObject.getString("weather_id"));
+                    county.setWeatherId(Integer.parseInt(countyObject.getString("weather_id")));
                     //所属的市级代号
                     county.setCityId(cityId);
                     county.save();
