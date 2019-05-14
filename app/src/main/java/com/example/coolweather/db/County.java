@@ -1,11 +1,6 @@
 package com.example.coolweather.db;
 
 import org.litepal.crud.DataSupport;
-import java.sql.Struct;
-/**
- * Created by 浅心 on 2019-05-13.
- */
-
 
 public class County extends DataSupport {
     private int id;//每一个实体类都需有一个id
